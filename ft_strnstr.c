@@ -6,7 +6,7 @@
 /*   By: mfahmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:08:17 by mfahmi            #+#    #+#             */
-/*   Updated: 2024/11/06 17:48:30 by mfahmi           ###   ########.fr       */
+/*   Updated: 2024/11/13 21:44:04 by mfahmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	j;
 	size_t	length;
 
-	if (!len)
+	if (!len && !str)
+		return (NULL);
+	if (!*to_find)
 		return ((char *)str);
 	length = ft_strlen(to_find);
 	i = 0;
